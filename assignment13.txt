@@ -1,0 +1,25 @@
+QUES: SYNCHRONIZED METHOD
+ANS
+package threadexample;
+
+public class ThreadExample extends Thread
+{
+
+    public static void main(String[] args) 
+    {
+       
+        Thread thread1 =new Thread(new ThreadExample());
+        
+        Thread thread2 =new Thread();
+        thread1.start();
+        thread2.start();
+        thread1.run();
+        thread2.run();
+    }
+    public void Synchronizedrun(){
+        for(int i=0;i<100;i++)
+        {
+            System.out.println(""+i);
+        }
+    }
+}
